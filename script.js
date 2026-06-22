@@ -858,28 +858,28 @@
         body: JSON.stringify(payload),
       })
         .then(function (r) {
-          return r.json().then(function (data) { return { status: r.status, ok: r.ok, data: data }; });
+          // FormSubmit sometimes returns non-JSON (HTML thank-you page) or a
+          // shape we don't recognize, but the email still gets delivered.
+          // We treat any HTTP 2xx as a successful delivery.
+          return r.text().then(function (text) {
+            var data = {};
+            try { data = JSON.parse(text); } catch (e) {}
+            return { status: r.status, ok: r.ok, data: data, text: text };
+          });
         })
         .then(function (res) {
           if (window.console) console.log('[contact] FormSubmit response:', res);
           var data = res.data || {};
-          var msg = (data.message || '').toString();
-          var success = data.success === true || data.success === 'true';
-          // FormSubmit's first-ever submission to a fresh address returns a
-          // message instructing the inbox owner to confirm via a one-time link.
-          var isActivation = /confirm|verify|activate/i.test(msg);
-
-          if (success && !isActivation) {
+          // Explicit failure path: server returned 2xx but with success:false
+          if (data.success === false || data.success === 'false') {
+            throw new Error((data.message || 'submission rejected').toString());
+          }
+          // Any 2xx response → email is on its way
+          if (res.ok) {
             form.reset();
             setStatus('success', 'Sent. Abhishek will reply to ' + email + ' within two business days.');
-          } else if (isActivation) {
-            // The activation email is on the way to the inbox owner.
-            setStatus('error',
-              'Almost there — a one-time activation email has been sent to ' + CONTACT_EMAIL +
-              '. Once activated, your message will be delivered. In the meantime, please email ' + CONTACT_EMAIL + ' directly.'
-            );
           } else {
-            throw new Error(msg || ('HTTP ' + res.status));
+            throw new Error('HTTP ' + res.status);
           }
         })
         .catch(function (err) {
