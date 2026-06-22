@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vishwaguru — Discipline, encoded.</title>
+  <meta name="description" content="Vishwaguru turns institutional long-short research from a craft held in memory into a system held in code." />
+  <meta name="theme-color" content="#0A0E1A" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Vishwaguru — Discipline, encoded." />
+  <meta property="og:description" content="Institutional long-short equity research, run as a system instead of a craft." />
+  <meta property="og:site_name" content="Vishwaguru" />
+  <meta property="og:url" content="https://vishwaguru.tech/" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Vishwaguru — Discipline, encoded." />
+  <meta name="twitter:description" content="Institutional long-short equity research, run as a system." />
+
+  <link rel="canonical" href="https://vishwaguru.tech/" />
+
+  <script>document.documentElement.classList.add('js');</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Vishwaguru",
+    "url": "https://vishwaguru.tech/",
+    "email": "abhishek.kanojia@vishwaguru.tech",
+    "description": "Systematic long-short equity research infrastructure for institutional teams in Indian equity markets."
+  }
+  </script>
+</head>
+<body>
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+  <div id="cursor-light" aria-hidden="true"></div>
+  <a href="#hero" class="skip-link">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="#hero" class="brand">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-name">vishwaguru</span>
+      </a>
+      <nav class="pill-nav" aria-label="Primary" data-spy-nav>
+        <a href="#hero" data-spy="hero" class="is-active">Home</a>
+        <a href="#thesis" data-spy="thesis">Thesis</a>
+        <a href="#framework" data-spy="framework">Framework</a>
+        <a href="#product" data-spy="product">Engines</a>
+        <a href="#status" data-spy="status">Status</a>
+        <a href="#contact" data-spy="contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <span class="brand-pill" data-reveal>live · india · long-short</span>
+            <h1 class="display" data-split-words>
+              Discipline, <span class="grad">encoded.</span>
+            </h1>
+            <p class="lede" data-reveal>
+              Institutional long-short research is a slow craft, held in one analyst's memory. Vishwaguru runs the same professional framework in code — and evaluates it up to <strong style="color:var(--ink-0);font-weight:600">20× faster</strong>, so the edge is still alive when you act.
+            </p>
+            <div class="hero-cta" data-reveal>
+              <a href="#contact" class="btn btn-primary" data-magnetic>Request a briefing →</a>
+              <a href="#framework" class="btn btn-ghost" data-magnetic>See the framework</a>
+            </div>
+            <div class="scroll-cue" data-reveal>
+              <span>Scroll to explore</span>
+              <span class="arrow" aria-hidden="true">↓</span>
+            </div>
+          </div>
+          <div class="hero-visual" data-reveal>
+            <canvas id="sphere-canvas" aria-hidden="true"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- THESIS -->
+    <section class="section" id="thesis">
+      <div class="container">
+        <p class="section-label" data-reveal>Thesis</p>
+        <h2 class="h2" data-reveal>A signal is only worth the <span class="grad">speed</span> you act on it.</h2>
+        <div class="thesis-grid">
+          <div class="thesis-stat-block" data-reveal>
+            <span class="thesis-number">20×</span>
+            <span class="thesis-unit">faster execution</span>
+          </div>
+          <div class="thesis-body-col" data-reveal>
+            <p class="body">The framework isn't a secret. Disciplined analysts know it. But run by hand, a single name eats hours — and by the time the work is finished, the dislocation has already closed.</p>
+            <p class="body" style="color:var(--ink-0)">Vishwaguru runs the full professional framework in code, evaluating up to <strong style="color:var(--teal)">20× faster</strong> than a human analyst. The discipline stays. The lag disappears.</p>
+            <div class="thesis-cards">
+              <div class="thesis-card">
+                <p class="thesis-card-label">Same rigor</p>
+                <p class="thesis-card-text">Five-step protocol on every name. No fatigue, no shortcuts.</p>
+              </div>
+              <div class="thesis-card thesis-card-amber">
+                <p class="thesis-card-label">Hours → minutes</p>
+                <p class="thesis-card-text">Acted on while the price is still wrong.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FRAMEWORK -->
+    <section class="section" id="framework">
+      <div class="container">
+        <div class="split-grid">
+          <div class="split-head">
+            <p class="section-label" data-reveal>Protocol</p>
+            <h2 class="h2" data-reveal>A protocol, <span class="grad">not a posture.</span></h2>
+            <p class="body" data-reveal>
+              Five steps. Same order. Every trade. The discipline is the difference between knowing the framework and running it.
+            </p>
+            <div class="split-meta" data-reveal>
+              <div class="split-meta-row">
+                <span class="meta-key">Origin</span>
+                <span class="meta-val">Practitioner-taught</span>
+              </div>
+              <div class="split-meta-row">
+                <span class="meta-key">Steps</span>
+                <span class="meta-val">05 — enforced order</span>
+              </div>
+              <div class="split-meta-row">
+                <span class="meta-key">Override</span>
+                <span class="meta-val">None</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="split-content" data-reveal>
+            <div class="step-cards">
+              <article class="step-card" data-tilt>
+                <span class="step-num">Step 01</span>
+                <h3 class="step-title">Read the weather</h3>
+                <p class="step-desc">Macro regime as the precondition.</p>
+              </article>
+              <article class="step-card" data-tilt>
+                <span class="step-num">Step 02</span>
+                <h3 class="step-title">Find the gaps</h3>
+                <p class="step-desc">Cross-sectional dislocations only.</p>
+              </article>
+              <article class="step-card" data-tilt>
+                <span class="step-num">Step 03</span>
+                <h3 class="step-title">Verify the story</h3>
+                <p class="step-desc">Score, don't guess. Travels with the trade.</p>
+              </article>
+              <article class="step-card" data-tilt>
+                <span class="step-num">Step 04</span>
+                <h3 class="step-title">Size by rule</h3>
+                <p class="step-desc">Hard constraints; never discretion.</p>
+              </article>
+              <article class="step-card" data-tilt>
+                <span class="step-num">Step 05</span>
+                <h3 class="step-title">Exit by design</h3>
+                <p class="step-desc">The most conservative stop wins.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCT — engines carousel -->
+    <section class="section" id="product">
+      <div class="container">
+        <p class="section-label" data-reveal>Engines</p>
+        <h2 class="h2" data-reveal>Five engines. One enforced sequence.</h2>
+        <p class="body" data-reveal>Each engine runs a stage of the framework in code — and hands off, in order, to the next.</p>
+
+        <div class="carousel" data-carousel data-reveal>
+          <div class="carousel-viewport">
+            <div class="carousel-track" id="engine-track">
+              <article class="engine-card" data-tilt>
+                <span class="engine-badge">Regime</span>
+                <span class="arrow" aria-hidden="true">↗</span>
+                <h3 class="h3">Macro Regime Engine</h3>
+                <p class="engine-tag">Knows the weather before the trade. Risk-on, risk-off, or transition — read first.</p>
+                <p style="font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;color:var(--teal);margin:14px 0 0">Step 01 · precondition</p>
+              </article>
+              <article class="engine-card" data-tilt>
+                <span class="engine-badge">Signal</span>
+                <span class="arrow" aria-hidden="true">↗</span>
+                <h3 class="h3">Signal Engine</h3>
+                <p class="engine-tag">Finds what consensus missed — cross-sectional dislocations, scored and ranked across the universe.</p>
+                <p style="font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;color:var(--teal);margin:14px 0 0">Step 02 · screen</p>
+              </article>
+              <article class="engine-card" data-tilt>
+                <span class="engine-badge">Verify</span>
+                <span class="arrow" aria-hidden="true">↗</span>
+                <h3 class="h3">Verification Engine</h3>
+                <p class="engine-tag">Separates story from substance. Qualitative scoring that travels with the trade — never a vibe.</p>
+                <p style="font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;color:var(--teal);margin:14px 0 0">Step 03 · score</p>
+              </article>
+              <article class="engine-card" data-tilt>
+                <span class="engine-badge">Construct</span>
+                <span class="arrow" aria-hidden="true">↗</span>
+                <h3 class="h3">Construction Engine</h3>
+                <p class="engine-tag">Sizes by rule, never by mood. Hard, risk-bounded position sizing with no discretionary override.</p>
+                <p style="font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;color:var(--teal);margin:14px 0 0">Step 04 · size</p>
+              </article>
+              <article class="engine-card" data-tilt>
+                <span class="engine-badge">Risk</span>
+                <span class="arrow" aria-hidden="true">↗</span>
+                <h3 class="h3">Risk Engine</h3>
+                <p class="engine-tag">Exits before the room does. The most conservative stop and target wins, by design.</p>
+                <p style="font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;color:var(--teal);margin:14px 0 0">Step 05 · exit</p>
+              </article>
+            </div>
+          </div>
+
+          <div class="carousel-controls">
+            <div class="carousel-dots" id="engine-dots" aria-hidden="true"></div>
+            <div class="carousel-arrows">
+              <button type="button" data-carousel-prev aria-label="Previous engine">←</button>
+              <button type="button" data-carousel-next aria-label="Next engine">→</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ARCHITECTURE — animated flow diagram -->
+    <section class="section" id="architecture">
+      <div class="container">
+        <p class="section-label" data-reveal>Architecture</p>
+        <h2 class="h2" data-reveal>From data to decision. <span class="grad">In one system.</span></h2>
+        <p class="body" data-reveal>
+          Six data streams feed a single reasoning core. Five engines emerge from it. Every link is enforced in code.
+        </p>
+
+        <div class="flowmap" data-reveal>
+          <!-- Top input chips -->
+          <div class="flowmap-row-top">
+            <div class="flowmap-chip" data-flow-top>
+              <span class="ico" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+                  <circle cx="7" cy="7" r="5"/>
+                  <path d="M2 7h10M7 2c2 2.5 2 7.5 0 10M7 2c-2 2.5-2 7.5 0 10"/>
+                </svg>
+              </span>
+              Macro Indicators
+            </div>
+            <div class="flowmap-chip" data-flow-top>
+              <span class="ico" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+                  <rect x="2" y="3" width="10" height="8" rx="1"/>
+                  <path d="M4 6h6M4 8.5h4"/>
+                </svg>
+              </span>
+              News &amp; Filings
+            </div>
+            <div class="flowmap-chip" data-flow-top>
+              <span class="ico" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+                  <rect x="5" y="2" width="4" height="6" rx="2"/>
+                  <path d="M3 7a4 4 0 008 0M7 11v1.5"/>
+                </svg>
+              </span>
+              Earnings Calls
+            </div>
+          </div>
+
+          <div class="flowmap-grid">
+            <!-- Left inputs -->
+            <div class="flowmap-col flowmap-inputs">
+              <div class="flowmap-node" data-flow-in>
+                <span class="ico" aria-hidden="true">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+                    <path d="M2 12V8M6 12V4M10 12V6"/>
+                  </svg>
+                </span>
+                <span class="label">Market Data</span>
+              </div>
+              <div class="flowmap-node" data-flow-in>
+                <span class="ico" aria-hidden="true">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+                    <path d="M3 12V3h8v9M6 6h2M6 9h2M3 12h8"/>
+                  </svg>
+                </span>
+                <span class="label">Fundamentals</span>
+              </div>
+              <div class="flowmap-node" data-flow-in>
+                <span class="ico" aria-hidden="true">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+                    <path d="M3 2h6l2 2v8H3V2zM5 6h4M5 9h4"/>
+                  </svg>
+                </span>
+                <span class="label">Corporate Actions</span>
+              </div>
+            </div>
+
+            <!-- Centre: reasoning core -->
+            <div class="flowmap-col flowmap-center">
+              <canvas id="core-viz" aria-hidden="true" style="width:176px;height:176px;display:block"></canvas>
+              <p class="flowmap-core-label">Professional Reasoning Core</p>
+            </div>
+
+            <!-- Right: engine outputs -->
+            <div class="flowmap-col flowmap-outputs">
+              <div class="flowmap-output" data-flow-out>
+                <span class="engine-badge">Regime</span>
+                <span class="output-text">Macro context read</span>
+                <span class="arrow" aria-hidden="true">↗</span>
+              </div>
+              <div class="flowmap-output" data-flow-out>
+                <span class="engine-badge">Signal</span>
+                <span class="output-text">Cross-sectional screen</span>
+                <span class="arrow" aria-hidden="true">↗</span>
+              </div>
+              <div class="flowmap-output" data-flow-out>
+                <span class="engine-badge">Verify</span>
+                <span class="output-text">Qualitative scoring</span>
+                <span class="arrow" aria-hidden="true">↗</span>
+              </div>
+              <div class="flowmap-output" data-flow-out>
+                <span class="engine-badge">Construct</span>
+                <span class="output-text">Risk-bounded sizing</span>
+                <span class="arrow" aria-hidden="true">↗</span>
+              </div>
+              <div class="flowmap-output" data-flow-out>
+                <span class="engine-badge">Risk</span>
+                <span class="output-text">Stop &amp; target synthesis</span>
+                <span class="arrow" aria-hidden="true">↗</span>
+              </div>
+            </div>
+          </div>
+
+          <svg class="flowmap-svg" aria-hidden="true"></svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIFFERENTIATORS -->
+    <section class="section" id="different">
+      <div class="container">
+        <p class="section-label" data-reveal>Distinctions</p>
+        <h2 class="h2" data-reveal>Built around the doctrine.</h2>
+
+        <div class="diffs">
+          <div class="diff" data-reveal>
+            <h3 class="h4">Practitioner-taught.</h3>
+            <p>Not theory. Not a screener with branding.</p>
+          </div>
+          <div class="diff" data-reveal>
+            <h3 class="h4">Long-short. Regime-aware.</h3>
+            <p>Two-sided books that scale with the weather.</p>
+          </div>
+          <div class="diff" data-reveal>
+            <h3 class="h4">Risk in code.</h3>
+            <p>No discretionary override path.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATUS -->
+    <section class="section" id="status">
+      <div class="container">
+        <p class="section-label" data-reveal>Status</p>
+        <h2 class="h2" data-reveal>In active build. <span class="grad">No theatre.</span></h2>
+
+        <div class="status-grid">
+          <div class="status-card" data-reveal>
+            <p class="status-state status-state-live">Live</p>
+            <p class="status-label">Data foundation.</p>
+          </div>
+          <div class="status-card" data-reveal>
+            <p class="status-state status-state-live">Shipped</p>
+            <p class="status-label">Deterministic engine.</p>
+          </div>
+          <div class="status-card" data-reveal>
+            <p class="status-state status-state-build">In build</p>
+            <p class="status-label">AI research layer.</p>
+          </div>
+          <div class="status-card" data-reveal>
+            <p class="status-state status-state-pending">Not yet</p>
+            <p class="status-label">Paying customers.</p>
+          </div>
+        </div>
+
+        <p class="caveat" data-reveal>
+          Pre-revenue. Bootstrapped. Solo-founder. The work speaks; we'd rather it speak in a briefing than on a marketing page.
+        </p>
+      </div>
+    </section>
+
+    <!-- HORIZON -->
+    <section class="section" id="horizon">
+      <div class="container">
+        <p class="section-label" data-reveal>Horizon</p>
+        <h2 class="h2" data-reveal>Institutions first. <span class="grad">Discipline, eventually, everywhere.</span></h2>
+        <p class="body" data-reveal>We earn the hard market first. What works for an institutional desk becomes the floor for everyone after it.</p>
+        <div class="horizon-cards">
+          <div class="horizon-card" data-reveal>
+            <span class="horizon-tag horizon-tag-now">Now</span>
+            <h3 class="h3">Institutional desks</h3>
+            <p>Long-short equity teams in Indian markets. The framework, run as infrastructure.</p>
+          </div>
+          <div class="horizon-card" data-reveal>
+            <span class="horizon-tag horizon-tag-next">Next</span>
+            <h3 class="h3">Emerging managers</h3>
+            <p>Smaller books that need institutional discipline without an institutional bench.</p>
+          </div>
+          <div class="horizon-card" data-reveal>
+            <span class="horizon-tag horizon-tag-horizon">Horizon</span>
+            <h3 class="h3">Disciplined everywhere</h3>
+            <p>The same encoded discipline, eventually, wherever capital is put at risk.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOUNDER -->
+    <section class="section" id="founder">
+      <div class="container">
+        <div class="founder-grid">
+          <div class="founder-copy">
+            <p class="section-label" data-reveal>Founder</p>
+            <h2 class="h2" data-reveal>One founder. Building in the open. Judged by the work.</h2>
+            <p class="body" data-reveal>No committee, no narrative team. A practitioner-taught framework, encoded by the person who has to live with every decision it makes.</p>
+          </div>
+          <div class="founder-card" data-reveal>
+            <div class="founder-header">
+              <span class="founder-avatar" aria-hidden="true"></span>
+              <div>
+                <p class="founder-name">Abhishek Kanojia</p>
+                <p class="founder-role">Founder · Vishwaguru</p>
+              </div>
+            </div>
+            <ul class="founder-bullets">
+              <li>Encoding a discretionary long-short process into a deterministic system.</li>
+              <li>Making professional rigor run 20× faster than it can by hand.</li>
+              <li>Shipping in public — no roadmap theatre, no vanity metrics.</li>
+            </ul>
+            <a href="mailto:abhishek.kanojia@vishwaguru.tech" class="text-link">abhishek.kanojia@vishwaguru.tech</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container narrow">
+        <p class="section-label" data-reveal>Questions</p>
+        <h2 class="h2" data-reveal>Direct answers.</h2>
+
+        <details class="faq" data-reveal>
+          <summary>Is this live?</summary>
+          <p>The data foundation and the deterministic engine are live. The AI research layer is in active build.</p>
+        </details>
+        <details class="faq" data-reveal>
+          <summary>How is it faster?</summary>
+          <p>The full professional framework runs in code — evaluating every name in parallel, up to 20× faster than a human analyst working by hand.</p>
+        </details>
+        <details class="faq" data-reveal>
+          <summary>Who is this for?</summary>
+          <p>Institutional long-short equity desks in Indian markets — and the allocators who back them.</p>
+        </details>
+        <details class="faq" data-reveal>
+          <summary>What is the professional framework?</summary>
+          <p>A practitioner-taught, systematic long-short research protocol. Five steps, enforced in the same order, every trade.</p>
+        </details>
+        <details class="faq" data-reveal>
+          <summary>Do you have paying customers?</summary>
+          <p>Not yet. Pre-revenue and bootstrapped — we would rather show the work in a briefing than overstate it on a page.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact" style="padding-bottom:100px;background:linear-gradient(180deg,transparent 0%,rgba(14,21,37,.6) 100%)">
+      <div class="container narrow">
+        <p class="section-label" data-reveal>Contact</p>
+        <h2 class="h2" data-reveal>Request a <span class="grad">briefing.</span></h2>
+        <p class="body" data-reveal>For institutional desks, allocators, and review partners. Use the form, or write directly — we read every message.</p>
+
+        <form id="contact-form" class="contact-form" novalidate data-reveal>
+          <div class="hp-field" aria-hidden="true">
+            <label for="company_website">Company website</label>
+            <input type="text" id="company_website" name="company_website" tabindex="-1" autocomplete="off" />
+          </div>
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required autocomplete="name" />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required autocomplete="email" />
+          </div>
+          <div class="field">
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company" autocomplete="organization" />
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary" data-magnetic>Send message →</button>
+            <p class="form-helper">We typically respond within two business days.</p>
+          </div>
+          <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>vishwaguru</span>
+      </div>
+      <p class="footer-meta">Systematic long-short equity research · India</p>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#framework">Framework</a>
+        <a href="#product">Engines</a>
+        <a href="#status">Status</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <p class="footer-fineprint">&copy; <span id="year"></span> vishwaguru — abhishek.kanojia@vishwaguru.tech</p>
+    </div>
+  </footer>
+
+  <!-- Libraries (no GSAP) -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.149.0/build/three.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+  <script src="script.js" defer></script>
+</body>
+</html>
