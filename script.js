@@ -857,16 +857,33 @@
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify(payload),
       })
-        .then(function (r) { return r.json(); })
-        .then(function (data) {
-          if (data && (data.success === true || data.success === 'true')) {
+        .then(function (r) {
+          return r.json().then(function (data) { return { status: r.status, ok: r.ok, data: data }; });
+        })
+        .then(function (res) {
+          if (window.console) console.log('[contact] FormSubmit response:', res);
+          var data = res.data || {};
+          var msg = (data.message || '').toString();
+          var success = data.success === true || data.success === 'true';
+          // FormSubmit's first-ever submission to a fresh address returns a
+          // message instructing the inbox owner to confirm via a one-time link.
+          var isActivation = /confirm|verify|activate/i.test(msg);
+
+          if (success && !isActivation) {
             form.reset();
             setStatus('success', 'Sent. Abhishek will reply to ' + email + ' within two business days.');
+          } else if (isActivation) {
+            // The activation email is on the way to the inbox owner.
+            setStatus('error',
+              'Almost there — a one-time activation email has been sent to ' + CONTACT_EMAIL +
+              '. Once activated, your message will be delivered. In the meantime, please email ' + CONTACT_EMAIL + ' directly.'
+            );
           } else {
-            throw new Error((data && data.message) || 'Unknown error');
+            throw new Error(msg || ('HTTP ' + res.status));
           }
         })
-        .catch(function () {
+        .catch(function (err) {
+          if (window.console) console.warn('[contact] error:', err);
           setStatus('error', 'Could not send right now. Please email ' + CONTACT_EMAIL + ' directly — sorry about this.');
         })
         .then(function () { setSubmitting(false); });
