@@ -1,0 +1,11 @@
+{
+  "name": "Vishwaguru",
+  "short_name": "Vishwaguru",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ],
+  "theme_color": "#0A0E1A",
+  "background_color": "#0A0E1A",
+  "display": "standalone"
+}
