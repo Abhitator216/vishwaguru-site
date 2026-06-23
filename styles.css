@@ -185,14 +185,24 @@ body::before {
 }
 .brand:hover { color: var(--ink-0); }
 .brand-mark {
-  width: 14px;
-  height: 14px;
-  background:
-    conic-gradient(from 140deg at 60% 60%, var(--teal), var(--amber), var(--teal), var(--teal-dim), var(--teal));
-  border-radius: 3px;
-  box-shadow:
-    0 0 0 1px rgba(255, 255, 255, 0.08) inset,
-    0 4px 16px -2px rgba(94, 234, 212, 0.45);
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  /* drop-shadow follows the SVG's actual circular shape (unlike box-shadow which would draw a square halo) */
+  filter:
+    drop-shadow(0 0 8px rgba(94, 234, 212, 0.35))
+    drop-shadow(0 4px 12px rgba(94, 234, 212, 0.18));
+  transition: filter 220ms ease, transform 220ms cubic-bezier(.2,.7,.2,1);
+}
+.brand:hover .brand-mark {
+  filter:
+    drop-shadow(0 0 12px rgba(94, 234, 212, 0.55))
+    drop-shadow(0 6px 18px rgba(94, 234, 212, 0.3));
+  transform: rotate(-8deg) scale(1.05);
+}
+.footer-brand .brand-mark {
+  width: 20px;
+  height: 20px;
 }
 
 .pill-nav {
@@ -1221,11 +1231,13 @@ body::before {
 }
 .flowmap-row-top {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 14px;
   flex-wrap: wrap;
   position: relative;
   z-index: 2;
+  /* Stay above the inputs+core columns of the grid below — never extend over the outputs column */
+  max-width: calc(((100% - 64px) * 2.2 / 3.8) + 32px);
 }
 .flowmap-chip {
   display: inline-flex;
@@ -1311,6 +1323,34 @@ body::before {
   width: 200px;
   height: 200px;
   display: block;
+}
+
+/* Stage that overlays the revolving favicon on top of the core node-graph */
+.core-stage {
+  position: relative;
+  width: 176px;
+  height: 176px;
+  display: grid;
+  place-items: center;
+}
+.core-favicon {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 64px;
+  height: 64px;
+  pointer-events: none;
+  z-index: 2;
+  filter:
+    drop-shadow(0 0 10px rgba(94, 234, 212, 0.55))
+    drop-shadow(0 0 22px rgba(94, 234, 212, 0.28));
+  animation: core-spin 18s linear infinite;
+}
+@keyframes core-spin {
+  to { transform: rotate(360deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .core-favicon { animation: none; }
 }
 .flowmap-core-label {
   font-family: var(--font-mono);
@@ -1576,6 +1616,68 @@ body::before {
 
 @media (prefers-reduced-motion: reduce) {
   .timeline-dot { animation: none; opacity: 0; }
+}
+
+/* ============================================================
+   Timeline — implicit accents (chevrons, corner ticks)
+   Adds subtle directional cues between steps without crowding.
+   ============================================================ */
+.timeline-step {
+  overflow: hidden; /* clip the corner accent */
+}
+.timeline-step::after {
+  /* Subtle corner accent (top-right) — like a notch / tick mark */
+  content: "";
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 8px;
+  height: 8px;
+  border-top: 1px solid rgba(94, 234, 212, 0.35);
+  border-right: 1px solid rgba(94, 234, 212, 0.35);
+  opacity: 0.7;
+  transition: opacity 260ms ease, border-color 260ms ease;
+}
+.timeline-step:hover::after {
+  opacity: 1;
+  border-top-color: var(--teal);
+  border-right-color: var(--teal);
+}
+
+/* Step number gets a tiny leading bullet for rhythm */
+.timeline-step .step-num {
+  position: relative;
+  padding-left: 12px;
+}
+.timeline-step .step-num::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 6px;
+  height: 1px;
+  margin-top: -0.5px;
+  background: var(--teal);
+  opacity: 0.7;
+}
+
+/* Tiny chevrons between cards (rendered via the grid gap, only on desktop) */
+@media (min-width: 961px) {
+  .timeline-steps {
+    position: relative;
+  }
+  .timeline-steps::before,
+  .timeline-steps::after {
+    /* keep slot for potential future arrow overlays — currently a no-op */
+    content: none;
+  }
+  /* Add a small "›" between each card via card pseudo */
+  .timeline-step:not(:last-child) {
+    /* Right-edge chevron, vertically aligned with the step title */
+  }
+  .timeline-step:not(:last-child)::before {
+    /* node marker is already top of card; we add a small chevron at vertical center, right edge */
+  }
 }
 
 /* ============================================================

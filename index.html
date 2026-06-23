@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vishwaguru — Discipline, encoded.</title>
+  <title>Vishwaguru</title>
   <meta name="description" content="Vishwaguru turns institutional long-short research from a craft held in memory into a system held in code." />
   <meta name="theme-color" content="#0A0E1A" />
 
@@ -54,7 +54,7 @@
   <header class="site-header" id="top">
     <div class="container header-inner">
       <a href="#hero" class="brand">
-        <span class="brand-mark" aria-hidden="true"></span>
+        <img src="/favicon.svg" alt="" class="brand-mark" width="20" height="20" />
         <span class="brand-name">vishwaguru</span>
       </a>
       <nav class="pill-nav" aria-label="Primary" data-spy-nav>
@@ -75,7 +75,6 @@
       <div class="container">
         <div class="hero-grid">
           <div class="hero-copy">
-            <span class="brand-pill" data-reveal>live · india · long-short</span>
             <h1 class="display" data-split-words>
               Discipline, <span class="grad">encoded.</span>
             </h1>
@@ -153,32 +152,37 @@
           </div>
 
           <div class="split-content" data-reveal>
-            <div class="step-cards">
-              <article class="step-card" data-tilt>
-                <span class="step-num">Step 01</span>
-                <h3 class="step-title">Read the weather</h3>
-                <p class="step-desc">Macro regime as the precondition.</p>
-              </article>
-              <article class="step-card" data-tilt>
-                <span class="step-num">Step 02</span>
-                <h3 class="step-title">Find the gaps</h3>
-                <p class="step-desc">Cross-sectional dislocations only.</p>
-              </article>
-              <article class="step-card" data-tilt>
-                <span class="step-num">Step 03</span>
-                <h3 class="step-title">Verify the story</h3>
-                <p class="step-desc">Score, don't guess. Travels with the trade.</p>
-              </article>
-              <article class="step-card" data-tilt>
-                <span class="step-num">Step 04</span>
-                <h3 class="step-title">Size by rule</h3>
-                <p class="step-desc">Hard constraints; never discretion.</p>
-              </article>
-              <article class="step-card" data-tilt>
-                <span class="step-num">Step 05</span>
-                <h3 class="step-title">Exit by design</h3>
-                <p class="step-desc">The most conservative stop wins.</p>
-              </article>
+            <div class="timeline">
+              <div class="timeline-line" aria-hidden="true">
+                <span class="timeline-dot"></span>
+              </div>
+              <div class="timeline-steps">
+                <article class="timeline-step">
+                  <span class="step-num">Step 01</span>
+                  <h3 class="step-title">Read the weather</h3>
+                  <p class="step-desc">Macro regime as the precondition.</p>
+                </article>
+                <article class="timeline-step">
+                  <span class="step-num">Step 02</span>
+                  <h3 class="step-title">Find the gaps</h3>
+                  <p class="step-desc">Cross-sectional dislocations only.</p>
+                </article>
+                <article class="timeline-step">
+                  <span class="step-num">Step 03</span>
+                  <h3 class="step-title">Verify the story</h3>
+                  <p class="step-desc">Score, don't guess. Travels with every trade.</p>
+                </article>
+                <article class="timeline-step">
+                  <span class="step-num">Step 04</span>
+                  <h3 class="step-title">Size by rule</h3>
+                  <p class="step-desc">Hard constraints; never discretion.</p>
+                </article>
+                <article class="timeline-step">
+                  <span class="step-num">Step 05</span>
+                  <h3 class="step-title">Exit by design</h3>
+                  <p class="step-desc">The most conservative stop wins.</p>
+                </article>
+              </div>
             </div>
           </div>
         </div>
@@ -316,8 +320,11 @@
 
             <!-- Centre: reasoning core -->
             <div class="flowmap-col flowmap-center">
-              <canvas id="core-viz" aria-hidden="true" style="width:176px;height:176px;display:block"></canvas>
-              <p class="flowmap-core-label">Professional Reasoning Core</p>
+              <div class="core-stage">
+                <canvas id="core-viz" aria-hidden="true" style="width:176px;height:176px;display:block"></canvas>
+                <img src="/favicon.svg" alt="" class="core-favicon" aria-hidden="true" />
+              </div>
+              <p class="flowmap-core-label">vishwaguru</p>
             </div>
 
             <!-- Right: engine outputs -->
@@ -534,7 +541,7 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <span class="brand-mark" aria-hidden="true"></span>
+        <img src="/favicon.svg" alt="" class="brand-mark" width="18" height="18" />
         <span>vishwaguru</span>
       </div>
       <p class="footer-meta">Systematic long-short equity research · India</p>
