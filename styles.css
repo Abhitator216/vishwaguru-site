@@ -1889,12 +1889,19 @@ body::before {
 .founder-avatar {
   width: 52px;
   height: 52px;
-  border-radius: 12px;
-  background: conic-gradient(from 140deg at 60% 60%, var(--teal), var(--amber), var(--teal), var(--teal-dim), var(--teal));
-  box-shadow:
-    0 0 0 1px rgba(255, 255, 255, 0.08) inset,
-    0 8px 24px -6px rgba(94, 234, 212, 0.45);
   flex: 0 0 auto;
+  display: inline-block;
+  /* drop-shadow follows the actual circular SVG shape */
+  filter:
+    drop-shadow(0 0 10px rgba(94, 234, 212, 0.45))
+    drop-shadow(0 8px 18px rgba(94, 234, 212, 0.22));
+  transition: filter 240ms ease, transform 240ms cubic-bezier(.2,.7,.2,1);
+}
+.founder-card:hover .founder-avatar {
+  transform: rotate(-6deg) scale(1.04);
+  filter:
+    drop-shadow(0 0 14px rgba(94, 234, 212, 0.6))
+    drop-shadow(0 10px 22px rgba(94, 234, 212, 0.3));
 }
 .founder-name {
   font-family: var(--font-mono);
