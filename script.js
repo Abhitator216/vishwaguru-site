@@ -22,7 +22,7 @@
 (function () {
   var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var isCoarsePointer = window.matchMedia('(hover: none)').matches;
-  var CONTACT_EMAIL = 'abhishek.kanojia@vishwaguru.tech';
+  var CONTACT_EMAIL = 'contact@vishwaguru.tech';
 
   function $all(sel, ctx) {
     return Array.prototype.slice.call((ctx || document).querySelectorAll(sel));
@@ -848,7 +848,7 @@
         _autoresponse:
           'Hi ' + name + ',\n\n' +
           'Thanks for reaching out about Vishwaguru — your briefing request has come through.\n\n' +
-          'Abhishek personally reads every message and typically replies within two business days.\n\n' +
+          'The founder personally reads every message and typically replies within two business days.\n\n' +
           '— Vishwaguru\nSystematic long-short equity research infrastructure\n',
       };
 
@@ -877,7 +877,7 @@
           // Any 2xx response → email is on its way
           if (res.ok) {
             form.reset();
-            setStatus('success', 'Sent. Abhishek will reply to ' + email + ' within two business days.');
+            setStatus('success', 'Sent. We will reply to ' + email + ' within two business days.');
           } else {
             throw new Error('HTTP ' + res.status);
           }
